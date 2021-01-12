@@ -1,3 +1,5 @@
+package projects.project01;
+
 /** Performs some basic linked list tests. */
 public class LinkedListDequeTest {
 	

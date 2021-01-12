@@ -1,3 +1,5 @@
+package projects.project01;
+
 public class LinkedListDeque<T> {
     private class LLNode {
         public T val;
