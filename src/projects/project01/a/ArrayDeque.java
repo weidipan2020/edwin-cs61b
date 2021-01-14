@@ -1,8 +1,10 @@
-package projects.project01;
+package projects.project01.a;
+
+import projects.project01.b.Deque;
 
 import java.util.Arrays;
 
-public class ArrayDeque<E> {
+public class ArrayDeque<E> implements Deque<E> {
 
     private E[] array;
     private int size;
@@ -56,7 +58,7 @@ public class ArrayDeque<E> {
         nextLast = newLast;
     }
 
-    public void addFitst(E item) {
+    public void addFirst(E item) {
         if (nextFirst == nextLast) {
             increaseSize();
         }
@@ -72,10 +74,6 @@ public class ArrayDeque<E> {
         array[nextLast] = item;
         size += 1;
         nextLast = (nextLast + 1) % array.length;
-    }
-
-    public boolean isEmpty() {
-        return size == 0;
     }
 
     public int size() {
@@ -102,13 +100,14 @@ public class ArrayDeque<E> {
         array[newFirst] = null;
         nextFirst = newFirst;
         checkUsage();
+        size -= 1;
         return tmp;
     }
 
     public void checkUsage() {
         int len = array.length;
         boolean flag = false;
-        while (len > 8 && (size / len) < 0.25) {
+        while (len > 8 && (size * 4 < len)) {
             len = len / 2;
             flag = true;
         }
@@ -126,6 +125,7 @@ public class ArrayDeque<E> {
         array[newLast] = null;
         nextLast = newLast;
         checkUsage();
+        size -= 1;
         return tmp;
     }
 

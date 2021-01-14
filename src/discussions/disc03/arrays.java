@@ -1,4 +1,4 @@
-package discussions.disc03.problem2;
+package discussions.disc03;
 
 public class arrays {
 

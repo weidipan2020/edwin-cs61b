@@ -1,10 +1,17 @@
-package chapter4.exercise.exe411;
+package chapter4.exercise.exe41;
 
-import weidi.discussion.disc03.problem1.SLList;
+import discussions.disc03.SLList;
 
 public class WordUtils {
     public String longestString(SLList<String> list) {
         String res = "";
+
+        for (int i = 0; i < list.size(); i++) {
+            String str = list.get(i);
+            if (res.length() < str.length()) {
+                res = str;
+            }
+        }
         return res;
     }
 

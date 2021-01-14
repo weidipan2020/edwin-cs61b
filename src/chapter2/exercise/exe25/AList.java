@@ -1,4 +1,4 @@
-package chapter2.exercise.exe251;
+package chapter2.exercise.exe25;
 
 /**
  * Array based list.

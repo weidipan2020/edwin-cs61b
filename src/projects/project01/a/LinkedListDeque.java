@@ -1,6 +1,8 @@
-package projects.project01;
+package projects.project01.a;
 
-public class LinkedListDeque<T> {
+import projects.project01.b.Deque;
+
+public class LinkedListDeque<T> implements Deque<T> {
     private class LLNode {
         public T val;
         public LLNode pre;
@@ -112,18 +114,6 @@ public class LinkedListDeque<T> {
             index -= 1;
         }
         return cur.val;
-    }
-
-    public static void main(String[] args) {
-        LinkedListDeque<Integer> deque = new LinkedListDeque<>();
-        deque.addFirst(1);
-        deque.addFirst(2);
-        deque.addLast(3);
-        deque.addLast(4);
-        deque.printDeque();
-
-        LinkedListDeque<Integer> copyDeque = new LinkedListDeque<>(deque);
-        copyDeque.printDeque();
     }
 
 }

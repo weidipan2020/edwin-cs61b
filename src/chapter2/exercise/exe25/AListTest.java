@@ -1,4 +1,4 @@
-package chapter2.exercise.exe251;
+package chapter2.exercise.exe25;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
